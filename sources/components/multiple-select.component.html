@@ -1,0 +1,18 @@
+﻿<div class="multiple-selection" [widthMultipleSelect]="multipleSelect.maxWidth">
+    <button type="button" readonly (click)="dropdownToggle = !dropdownToggle">
+        <span>{{multipleSelect.selectionTitle }}</span>
+        <span class="i-down"></span>
+    </button>
+    <div class="show-tree-view" *ngIf="multipleSelect.items != undefined && dropdownToggle">
+        <div class="dropdown-header" *ngIf="multipleSelect.showHeader">
+            <label>
+                <input type="checkbox" [(ngModel)]="isCheckAll" (ngModelChange)="multipleSelect.checkAllItems(isCheckAll)" />
+                {{multipleSelect.checkAllCheckBoxText}}
+            </label>
+            <span [ngClass]="{'i-up': expanded, 'i-down': !expanded}" (click)="toggle()"></span>
+        </div>
+        <div class="tree-view-content" [heightMultipleSelect]="multipleSelect.maxHeight">
+            <tree-view [items]="multipleSelect.items" (change)="changeItems()"></tree-view>
+        </div>
+    </div>
+</div>
