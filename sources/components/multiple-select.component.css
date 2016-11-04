@@ -50,7 +50,8 @@
         left: 0;
         z-index: 1000;
         float: left;
-        width: 100%;
+        width: 100%;        
+        margin: 0 -2px;
         font-size: 14px;
         text-align: left;
         list-style: none;

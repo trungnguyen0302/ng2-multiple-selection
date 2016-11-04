@@ -1,6 +1,6 @@
 {
     "name": "angular-2-multiple-selection",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "main": "sources/components/multiple-select.component.ts",
     "repository": {
         "type": "git",
@@ -11,8 +11,8 @@
         "multiple selection"
     ],
     "author": "Trung Nguyen Viet",
-    "license": "MIT",
     "homepage": "https://github.com/theknight0302/ng2-multiple-selection",
+	"filename": "README.md",
     "dependencies": {
         "@angular/core": "*",
 		"rxjs": "*",

@@ -1,4 +1,4 @@
-﻿<div class="multiple-selection" [widthMultipleSelect]="multipleSelect.maxWidth">
+﻿<div class="multiple-selection" [style.width]="multipleSelect.maxWidth">
     <button type="button" readonly (click)="dropdownToggle = !dropdownToggle">
         <span>{{multipleSelect.selectionTitle }}</span>
         <span class="i-down"></span>
@@ -11,7 +11,7 @@
             </label>
             <span [ngClass]="{'i-up': expanded, 'i-down': !expanded}" (click)="toggle()"></span>
         </div>
-        <div class="tree-view-content" [heightMultipleSelect]="multipleSelect.maxHeight">
+        <div class="tree-view-content" [style.max-height]="multipleSelect.maxHeight">
             <tree-view [items]="multipleSelect.items" (change)="changeItems()"></tree-view>
         </div>
     </div>
