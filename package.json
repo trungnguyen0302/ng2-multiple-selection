@@ -1,6 +1,6 @@
 {
     "name": "angular-2-multiple-selection",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "main": "sources/components/multiple-select.component.ts",
     "repository": {
         "type": "git",
@@ -8,7 +8,9 @@
     },
     "keywords": [
         "angular 2",
-        "multiple selection"
+        "multiple selection",
+		"multi select",
+		"parent child select"
     ],
     "author": "Trung Nguyen Viet",
     "homepage": "https://github.com/theknight0302/ng2-multiple-selection",

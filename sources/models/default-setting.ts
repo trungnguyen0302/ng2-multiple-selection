@@ -7,7 +7,6 @@
     public static get CHARACTER_VALUE(): string { return ','; }
     public static get CHARACTER_TEXT(): string { return ', '; }
     public static get NUMBER_ITEMS_DISPLAY(): number { return 3; }
-    public static get ITEMS_CHECKED_TEXT(): string { return 'selected'; }
     public static get MAX_HEIGHT(): string { return '350px'; }
     public static get MAX_WIDTH(): string { return '150px'; }
     public static get SHOW_HEADER(): boolean { return true; }

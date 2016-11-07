@@ -3,154 +3,167 @@
     display: inline-block;
 }
 
-    multiple-select input[type="checkbox"] {
-        margin: 0;
-    }
+label{
+    cursor: pointer;
+}
 
-    multiple-select button {
-        width: 100%;
-        height: 34px;
-        color: #333;
-        background-color: #fff;
-        border-color: #ccc;
-        padding: 5px 10px;
-        cursor: pointer;
-        background-image: none;
-        border: 1px solid #cccccc;
-        border-radius: 4px;
-        text-align: left;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+multiple-select input[type="checkbox"] {
+	margin: 0;
+}
 
-        multiple-select button:hover {
-            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-            color: #333;
-            background-color: #e6e6e6;
-            border-color: #adadad;
-        }
+multiple-select button {
+	width: 100%;
+	height: 34px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	padding: 5px 10px;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 20px;
+}
 
-        multiple-select button:focus {
-            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-            color: #333;
-            background-color: #e6e6e6;
-            border-color: #8c8c8c;
-        }
+multiple-select button:hover {
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
 
-        multiple-select button .i-down {
-            float: right;
-        }
+multiple-select button:focus {
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #8c8c8c;
+}
 
-    multiple-select .show-tree-view {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        float: left;
-        width: 100%;        
-        margin: 0 -2px;
-        font-size: 14px;
-        text-align: left;
-        list-style: none;
-        background-color: #fff;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        border: 1px solid #ccc;
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    }
+multiple-select button .i-down {
+	float: right;
+}
 
-        multiple-select .show-tree-view .tree-view-content {
-            display: inline-block;
-            width: 100%;
-            overflow: auto;
-        }
+multiple-select .show-tree-view {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	float: left;
+	width: 100%;        
+	margin: 0 -2px;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
 
-        multiple-select .show-tree-view .dropdown-header {
-            border-bottom: 1px solid darkgray;
-            padding: 0 10px;
-        }
+multiple-select .show-tree-view .tree-view-content {
+	display: inline-block;
+	width: 100%;
+	overflow: auto;
+}
 
-            multiple-select .show-tree-view .dropdown-header label {
-                display: inline-block;
-                margin-bottom: 0;
-            }
+multiple-select .show-tree-view .dropdown-header {
+	border-bottom: 1px solid darkgray;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+}
 
-            multiple-select .show-tree-view .dropdown-header .i-up {
-                float: right;
-            }
+multiple-select .show-tree-view .dropdown-header label {
+	display: inline-block;
+	margin-bottom: 0;
+}
 
-            multiple-select .show-tree-view .dropdown-header .i-down {
-                float: right;
-            }
+multiple-select .show-tree-view .dropdown-header .i-up {
+	float: right;
+}
 
-    multiple-select tree-view ul {
-        margin: 0 0 0 15px;
-    }
+multiple-select .show-tree-view .dropdown-header .i-down {
+	float: right;
+}
 
-    multiple-select tree-view .multiple-select-item {
-        display: flex;
-    }
+multiple-select tree-view ul {
+	margin: 0 0 0 15px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	list-style-type: none;
+	padding: 0;
+}
 
-        multiple-select tree-view .multiple-select-item:hover {
-            background: aliceblue;
-        }
+multiple-select tree-view .multiple-select-item {
+	display: flex;
+}
 
-        multiple-select tree-view .multiple-select-item .i-expanded {
-            cursor: pointer;
-            width: 0;
-            height: 0;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 5px;
-            margin-top: 10px;
-            border-top: 4px dashed;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;
-        }
+multiple-select tree-view .multiple-select-item:hover {
+	background: aliceblue;
+}
 
-        multiple-select tree-view .multiple-select-item .i-collapsed {
-            cursor: pointer;
-            width: 0;
-            height: 0;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 9px;
-            margin-top: 9px;
-            border-left: 4px dashed;
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-        }
+multiple-select tree-view .multiple-select-item .i-expanded {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: 10px;
+	border-top: 4px dashed;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
 
-        multiple-select tree-view .multiple-select-item .margin-left-13 {
-            margin-left: 13px;
-        }
+multiple-select tree-view .multiple-select-item .i-collapsed {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 9px;
+	margin-top: 9px;
+	border-left: 4px dashed;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+}
 
-    multiple-select .i-down {
-        cursor: pointer;
-        width: 0;
-        height: 0;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 10px;
-        border-top: 4px dashed;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
-    }
+multiple-select tree-view .multiple-select-item .margin-left-13 {
+	margin-left: 13px;
+}
 
-    multiple-select .i-up {
-        cursor: pointer;
-        width: 0;
-        height: 0;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 8px;
-        border-bottom: 4px dashed;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
-    }
+multiple-select .i-down {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 10px;
+	border-top: 4px dashed;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+multiple-select .i-up {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 8px;
+	border-bottom: 4px dashed;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}

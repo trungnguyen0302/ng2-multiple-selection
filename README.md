@@ -1,21 +1,23 @@
 # ng2-multiple-selection
 Angular 2: Multiple Selection
 
+<strong> <a href="https://embed.plnkr.co/jCg4d4yApxsIZrNUPLBl/" target="_blank">DEMO</a><strong>
+
 <strong>Step 1:</strong> Install angular-2-multiple-selection package
  - Using npm:
- <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">npm install angular<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">-</span>multiple<span style="color: #333333">-</span>selection <span style="color: #333333">--</span>save
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">npm install angular<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">-</span>multiple<span style="color: #333333">-</span>selection <span style="color: #333333">--</span>save
 </pre></div>
  - or add package in "package.json":
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="background-color: #fff0f0">&quot;devDependencies&quot;</span><span style="color: #FF0000; background-color: #FFAAAA">:</span> {
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="background-color: #fff0f0">&quot;devDependencies&quot;</span><span style="color: #FF0000; background-color: #FFAAAA">:</span> {
     <span style="color: #007700">&quot;angular-2-multiple-selection&quot;</span>: <span style="background-color: #fff0f0">&quot;*&quot;</span>
 }
 </pre></div>
 
 <strong>Step 2:</strong> "app.module.ts"
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> { MultipleSelect } from <span style="background-color: #fff0f0">&quot;angular-2-multiple-selection/multiple-select&quot;</span>;
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> { MultipleSelect } from <span style="background-color: #fff0f0">&quot;angular-2-multiple-selection/multiple-select&quot;</span>;
 </pre></div>
 
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #FF0000; background-color: #FFAAAA">@</span>NgModule({
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #FF0000; background-color: #FFAAAA">@</span>NgModule({
     declarations<span style="color: #333333">:</span> [
         MultipleSelect
     ]
@@ -23,11 +25,10 @@ Angular 2: Multiple Selection
 </pre></div>
 
 <strong>Step 3:</strong> "app.component.html":
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;multiple</span><span style="color: #0000CC">-select</span> <span style="color: #FF0000; background-color: #FFAAAA">[</span><span style="color: #0000CC">multipleSelect</span><span style="color: #FF0000; background-color: #FFAAAA">]=&quot;</span><span style="color: #0000CC">multipleSelect</span><span style="color: #FF0000; background-color: #FFAAAA">&quot;</span><span style="color: #007700">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/multiple-select&gt;
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;multiple</span><span style="color: #0000CC">-select</span> <span style="color: #FF0000; background-color: #FFAAAA">[</span><span style="color: #0000CC">multipleSelect</span><span style="color: #FF0000; background-color: #FFAAAA">]=&quot;</span><span style="color: #0000CC">multipleSelect</span><span style="color: #FF0000; background-color: #FFAAAA">&quot;</span><span style="color: #007700">&gt;</span><span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/multiple-select&gt;
 </pre></div>
 
 <strong>Step 4:</strong> "app.component.ts":
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre class="csharpcode">
 import { ItemsSelect } <span class="kwrd">from</span> <span class="str">"angular-2-multiple-selection/sources/models/items-select"</span>;
 import { MultipleSelect } <span class="kwrd">from</span> <span class="str">"angular-2-multiple-selection/sources/models/multiple-select"</span>;
@@ -54,3 +55,16 @@ export <span class="kwrd">class</span> AppComponent {
     }
 }</pre>
 
+
+<strong>Customize:</strong>
+<pre class="csharpcode">
+<span class="kwrd">this</span>.multipleSelect.showHeader = <span class="kwrd">false</span> <span class="rem">// Default: true</span>
+<span class="kwrd">this</span>.multipleSelect.numberItemsDisplay = 4; <span class="rem">// Default: 3</span>
+<span class="kwrd">this</span>.multipleSelect.checkAllCheckBoxText = <span class="str">'Check All'</span>; <span class="rem">// Default: 'Check All Items'</span>
+<span class="kwrd">this</span>.multipleSelect.noneItemCheckedText = <span class="str">'None'</span>; <span class="rem">// Default: 'None Selected'</span>
+<span class="kwrd">this</span>.multipleSelect.allItemsCheckedText = <span class="str">'All'</span>; <span class="rem">// Default: 'All Items Checked'</span>
+<span class="kwrd">this</span>.multipleSelect.subfixNumberItemsCheckedText = <span class="str">' checked'</span>; <span class="rem">// Default: ' selected'</span>
+<span class="kwrd">this</span>.multipleSelect.characterValue = <span class="str">'^'</span>; <span class="rem">// Default: ','</span>
+<span class="kwrd">this</span>.multipleSelect.characterText = <span class="str">' - '</span>; <span class="rem">// Default: ', '</span>
+<span class="kwrd">this</span>.multipleSelect.maxHeight = <span class="str">'200px'</span>; <span class="rem">// Default: '350px'</span>
+<span class="kwrd">this</span>.multipleSelect.maxWidth = <span class="str">'150px'</span>; <span class="rem">// Default: '150px'</span></pre>

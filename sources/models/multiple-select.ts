@@ -6,7 +6,6 @@ export class MultipleSelect {
     maxHeight: string = DefaultSetting.MAX_HEIGHT;
     maxWidth: string = DefaultSetting.MAX_WIDTH;
     checkAllCheckBoxText: string = DefaultSetting.CHECK_ALL_CHECK_BOX_TEXT;
-    noItemText: string = DefaultSetting.NONE_ITEM_CHECKED_TEXT;
     allItemsCheckedText: string = DefaultSetting.ALL_ITEMS_CHECKED_TEXT;
     noneItemCheckedText: string = DefaultSetting.NONE_ITEM_CHECKED_TEXT;
     subfixNumberItemsCheckedText: string = DefaultSetting.SUBFIX_NUMBER_ITEMS_CHECKED_TEXT;
