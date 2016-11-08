@@ -1,4 +1,4 @@
-﻿import { Component, ViewContainerRef, Input, OnInit } from '@angular/core';
+﻿import { Component, ViewContainerRef, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 import { TreeViewComponent } from './tree-view.component';
 
@@ -15,6 +15,7 @@ import { MultipleSelect } from '../models/multiple-select';
 
 export class MultipleSelectComponent implements OnInit {
     @Input() multipleSelect: MultipleSelect;
+	@Output() loseFocus = new EventEmitter();
 
     dropdownToggle: boolean;
     isCheckAll: boolean;
@@ -43,6 +44,7 @@ export class MultipleSelectComponent implements OnInit {
             if (!this.dropdownToggle || !e.target) { return; };
             if (this.element !== e.target && !this.element.contains((<any>e.target))) {
                 this.dropdownToggle = false;
+				this.loseFocus.emit(this.multipleSelect.getValueItems());
             }
         }, false);
     }
