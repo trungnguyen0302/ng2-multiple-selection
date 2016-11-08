@@ -34,6 +34,7 @@ export class MultipleSelectComponent implements OnInit {
 
     getSelectedTitle() {
         this.multipleSelect.selectionTitle = this.multipleSelect.getItemsDisplay();
+		this.isCheckAll = this.multipleSelect.selectionTitle === this.multipleSelect.allItemsCheckedText;
     }
 
     clickBody() {

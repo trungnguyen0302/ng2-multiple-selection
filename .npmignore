@@ -4,6 +4,8 @@
 node_modules/
 .*.swp
 ._*
+.js
+.map
 .DS_Store
 .git
 .hg
