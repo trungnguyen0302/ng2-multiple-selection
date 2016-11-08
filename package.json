@@ -1,6 +1,6 @@
 {
     "name": "angular-2-multiple-selection",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "sources/components/multiple-select.component.ts",
     "repository": {
         "type": "git",
