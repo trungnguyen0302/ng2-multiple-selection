@@ -13,6 +13,7 @@ import { ItemsSelect } from '../models/items-select';
 
 export class TreeViewComponent {
     @Input() items: Array<ItemsSelect>;
+    lastItem: ItemsSelect;
     shiftKey: boolean;
 
     keyDown(event: KeyboardEvent) {
@@ -24,31 +25,40 @@ export class TreeViewComponent {
     }
 
     clickEvent(item: ItemsSelect) {
-        if (this.shiftKey && item.checked) {
-            this.checkListItem(item);
+        if (this.shiftKey) {
+            this.handleWithShiftCheckbox(item);
         }
+
+        this.lastItem = item;
+    }
+
+    handleWithShiftCheckbox(item: ItemsSelect) {
+        if (this.lastItem === undefined) {
+            return;
+        }
+        else {
+            this.checkListItem(item);
+        }        
     }
 
     checkListItem(currentItem: ItemsSelect) {
-        var previousItem: ItemsSelect;        
+        var start = 0;
         var end = 0;
-        while (end < this.items.length && this.items[end].id !== currentItem.id) {
-            if (this.items[end].checked) {
-                previousItem = this.items[end]
+        var lastIndex = 0;
+        var currentIndex = 0;
+        for (var i = 0; i < this.items.length && (lastIndex === 0 || currentIndex === 0); i++) {            
+            if (this.items[i].id === this.lastItem.id) {
+                lastIndex = i;
             }
-
-            end++;
+            if (this.items[i].id === currentItem.id) {
+                currentIndex = i;
+            }            
         }
 
-        var start = 0;
-        if (previousItem !== undefined) {
-            while (start < this.items.length && this.items[start].id !== previousItem.id) {
-                start++;
-            }
-        }        
-
-        for (start; start < end; start++) {
-            this.items[start].checked = true;
+        start = Math.min(lastIndex, currentIndex);
+        end = Math.max(lastIndex, currentIndex);
+        for (var i = start; i <= end; i++) {
+            this.items[i].checked = currentItem.checked;
         }
     }
 }

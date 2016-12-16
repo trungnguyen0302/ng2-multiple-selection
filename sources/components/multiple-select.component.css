@@ -108,6 +108,13 @@ multiple-select tree-view ul {
 	padding: 0;
 }
 
+multiple-select tree-view li {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
 multiple-select tree-view .multiple-select-item {
 	display: flex;
 }
